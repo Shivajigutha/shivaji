@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.objectFactory" value="spring" />
+	<package name="default" extends="json-default">
+		<interceptors>
+			<interceptor name="log"
+				class="com.controller.Interceptor" />
+		</interceptors>
+		<action name="login" class="com.controller.UserActions"
+			method="login">
+			<!-- default stack is mandatory when writing user defined interceptor -->
+			<interceptor-ref name="defaultStack" />
+			<interceptor-ref name="log" />
+			<result type="redirect" name="success">succes.jsp</result>
+			<result type="redirect" name="error">error.jsp</result>
+			<!-- type = "redirect" to redirect -->
+		</action>
+		<action name="logout" class="com.controller.UserActions"
+			method="logout">
+			<!-- default stack is mandatory when writing user defined interceptor -->
+			<interceptor-ref name="defaultStack" />
+			<interceptor-ref name="log" />
+			<result type="redirect" name="success">login.html</result>
+			<result type="redirect" name="error">error.jsp</result>
+			<!-- type = "redirect" to redirect -->
+		</action>
+		<action name="profileDisplay" class="com.controller.UserActions"
+			method="profileInfo">
+			<!-- default stack is mandatory when writing user defined interceptor -->
+			<interceptor-ref name="defaultStack" />
+			<interceptor-ref name="log" />
+			<result type="redirect" name="success">profile.jsp</result>
+			<result type="redirect" name="error">error.jsp</result>
+			<!-- type = "redirect" to redirect -->
+		</action>
+		<action name="companylogin" class="com.controller.UserActions"
+			method="companyLogin">
+			<!-- default stack is mandatory when writing user defined interceptor -->
+			<interceptor-ref name="defaultStack" />
+			<interceptor-ref name="log" />
+			<result name="successcompany">successcompany.html</result>
+			<result name="errorcompany">error.jsp</result> <!-- type = "redirect" to redirect -->
+		</action>
+		<action name="register" class="com.controller.UserActions"
+			method="register">
+			<interceptor-ref name="defaultStack" />
+			<interceptor-ref name="log" />
+				<result name="success">login.html</result>
+				<result name="error">error.jsp</result>
+				
+		</action>
+		<action name="reset" class="com.controller.UserActions"  method="reset">
+		<interceptor-ref name="defaultStack" />
+			<interceptor-ref name="log" />
+				<result name="success">reset.html</result>
+				<result name="error">error.jsp</result>
+		</action>
+   		<action name="updatepassword" class="com.controller.UserActions"  method="updatePassword">
+		<interceptor-ref name="defaultStack" />
+			<interceptor-ref name="log" />
+				<result name="success">login.html</result>
+				<result name="error">error.jsp</result>
+		</action>
+   
+		
+		<action name="jsonTest" class="com.strut.JSONAction"
+			method="execute">
+			<result name="success" type="json"></result>
+		</action>
+	</package>
+</struts>

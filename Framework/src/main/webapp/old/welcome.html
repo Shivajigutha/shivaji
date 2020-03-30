@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>homepage</title>
+<link rel="stylesheet" href="welcome.css">
+<script src="welcome.js"></script>
+</head>
+<body>
+	<div align="center" id="logindiv">
+		<form action="login" method="GET">
+			<table align="center">
+				<tr>
+					<h1 align="center">Welcome to Placement Portal</h1>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><input type="email" name="email" class="font"></td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td><input type="password" name="password" class="font"></td>
+				</tr>
+				<tr>
+					<td><input type="submit" id="loginsubmit" value="Login" class="buttonsize" onmouseover="mouseinbutton()" onmouseout="mouseoutbutton()"></td>
+					<td onmouseover="mouseintext()" onclick="displayRegister()" onmouseout="mouseouttext()"><u id="registerpage">Create an Account</u> </td>
+
+				</tr>
+			</table>
+		</form>
+	</div>
+
+	<div align="center" id="registerdiv" style="display: none;">
+		<form action="register" method="GET">
+			<table align="center">
+				<tr>
+					<h1 align="center">Create Account</h1>
+				</tr>
+				<tr>
+					<td>Full name</td>
+					<td><input type="text" name="fullname" class="font"></td>
+
+				</tr>
+				<tr>
+					<td>Phone no</td>
+					<td><input type="text" name="phone" class="font"></td>
+				</tr>
+				<tr>
+					<td>Gender</td>
+					<td><select name="gender" id="gender" class="font">
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+						<option value="other">Other</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td>Age</td>
+					<td><input type="text" name="age" maxlength="3" size="4" class="font"></td>
+				</tr>
+				<tr>
+					<td>Qualification</td>
+					<td><select name="qualification" id="qualification" class="font">
+
+						<option value="associate">Associate degree</option>
+						<option value="bachelors">Bachelor's degree</option>
+						<option value="masters">Master's degree</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td>GPA</td>
+					<td><input type="text" name="gpa" maxlength="3" size="4" placeholder="0.0" class="font"></td>
+				</tr>
+				<tr>
+					<td>Years of Experience</td>
+					<td><input type="text" name="experience" maxlength="2" size="4" class="font"></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><input type="email" name="email" class="font"></td>
+				</tr>
+				<tr>
+					<td>Password</td> 
+					<td><input type="password" name="password" class="font"></td>
+
+				</tr>
+					<td ><input type="submit" id="registersubmit" value="Create Account" onmouseover="mouseinbutton()" onmouseout="mouseoutbutton()" class="buttonsize"></td>
+				<tr>
+					<td>
+						<p>Already have an account?</p>
+					</td>
+					<td onmouseover="mouseintext()" onclick="displayLogin()" onmouseout="mouseouttext()"><u id="loginpage">Sign In</u></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+
+</body>
+</html>

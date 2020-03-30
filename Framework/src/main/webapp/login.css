@@ -1,0 +1,99 @@
+*{color: #fff;}
+*{
+	margin: 0;
+	padding: 0;
+
+}
+#screen{
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	
+}
+.logo img{
+	width: 6.5%;
+	float: left;
+    height: auto;
+        
+}
+.wrapper{
+	width: auto;
+	margin: auto;
+
+}
+
+header{
+	width:auto;
+	background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url("bg.jpeg");
+	height: 100vh;
+	-webkit-background-size:cover;
+	background-size: cover ;
+	background-position: center center;
+	position: relative;
+}
+.nav-area{
+	float: right;
+	list-style:none;
+	margin-top: 3%;
+}
+.nav-area li{
+	display: inline-block;
+}
+.nav-area li a{
+	color: #fff;
+	text-decoration: none;
+	padding: 5% 20px;
+	font-family: poppins;
+	font-size: 165%;
+}
+.nav-area li a:hover{
+	background: #fff;
+	color: #333;
+}
+
+
+
+#loginform
+{
+border: 0% solid #fff; 
+padding:10% 20%; 
+margin-top: 60%;
+-webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75)
+} 
+
+#registerform
+{
+        
+border: 0% solid #fff; 
+padding:10% 20%; 
+margin-top:30%;
+-webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75)
+} 
+
+#resetform
+{
+border: 0% solid #fff; 
+padding:10% 20%; 
+margin-top: 60%;
+-webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75)
+}
+#updatepasswordform
+{
+border: 0% solid #fff; 
+padding:10% 20%; 
+margin-top: 60%;
+-webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75)
+}
+select {
+        width: 8%;
+        margin: 10%;
+        }
+        

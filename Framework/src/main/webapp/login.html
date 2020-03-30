@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Loginpage</title>
+		<link rel="stylesheet" href="login.css">
+		<script src="loginregister.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+
+</head>
+
+<body id="screen">
+	<header>
+		<div class="logo">
+			<a href="landing.html"><img src="logo.jpg" alt="logo"></a>
+		</div>
+			<div class="wrapper">
+				<ul class="nav-area">
+					<li id="hometext" onclick="homePage()"><a href="#">Home</a></li>
+					<li id="logintext" onclick="loginPage()"><a href="#">Login</a></li>
+					<li><a href="#">Services</a></li>
+					<li id="abouttext" onclick="displayAbout()"><a href="#">About</a></li>
+					<li id="contacttext" onclick="contactPage()"><a href="#">Contact Us</a></li>
+		
+				</ul>
+			</div>
+	<div class="container-fluid bg" id="logindiv">
+		
+		<div class="row">
+			<div class="col-md-5 col-sm-4 col-xs-12"></div>
+			<div class="col-md-5 col-sm-4 col-xs-12">
+
+				<div class="form-container" id="loginform">
+						<div class="wrapper">
+							<ul class="nav-area">
+								<li style="font-size: 130%" id="clienttext" onclick="displayClient()"><a href="#">Login</a></li>
+								<li style="font-size: 130%"  id="companytext" onclick="displayCompany()"><a href="#">Company</a></li>
+							</ul>
+						</div>
+						<form action="login" method="post">
+						<div id="clientdiv" style="display: block">
+					<div class="form-group">
+						<label for="inputEmail1" style="font-size: 150%;">Email address</label>
+						<input type="email" class="form-control" name="email" id="inputEmail1" placeholder="Email" style="font-size: 120%;" required="required">
+					</div>
+					<div class="form-group">
+						<label for="inputPassword" style="font-size: 150%;">Password</label>
+						<input type="password" class="form-control" name="password" id="inputPassword" placeholder="Password" style="font-size: 120%;" required="required">
+					</div>
+					<div class="checkbox">
+						<label style="font-size: 150%;">
+							<input type="checkbox"> Remember me
+						</label>
+					</div>
+					<button type="submit" class="btn btn-success btn-block" style="font-size: 130%;">Login</button>
+					<table>
+					<tr>
+						<td><span style="font-size: 150%;">Don't have an account?</span></td>
+ 						<td onclick="displayRegister()"><a href="#" style="font-size: 2vh; color: coral; margin: 10%;">SignUp</a></td>
+					</tr></table>
+					<a href="#" style="font-size: 1.5vh; color: chocolate;" onclick="displayReset()">Forgot your password?</a>
+					</div>
+					</form>
+					
+					
+					<form action="companylogin" method="get">
+					<div id="companydiv" style="display: none">
+					<div class="form-group">
+						<label for="username" style="font-size: 150%;">Username</label>
+						<input type="text" class="form-control" name="username" id="username" placeholder="username" style="font-size: 120%;" required="required">
+					</div>
+					<div class="form-group">
+						<label for="Password" style="font-size: 150%;">Password</label>
+						<input type="password" class="form-control" name="pwd" id="Password" placeholder="Password" style="font-size: 120%;" required="required">
+					</div>
+					<div class="checkbox">
+						<label style="font-size: 150%;">
+							<input type="checkbox"> Remember me
+						</label>
+					</div>
+						<button type="submit" class="btn btn-success btn-block" style="font-size: 130%;">Login</button>
+					
+					</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	<div class="container-fluid bg" id="registerdiv" style="display: none;">
+		<div class="row">
+			<div class="col-md-5 col-sm-4 col-xs-12"></div>
+			<div class="col-md-5 col-sm-4 col-xs-12">
+
+
+				<form action="register" method="GET" class="form-container" id="registerform" style ="font-size: 130%;">
+					<h1 style="font-size: 250%;">Create account</h1>
+					<div class="form-group">
+						<label for="fullname">Fullname</label>
+						<input id="fullname" name="fullname" type="text" class="form-control" required="required">
+					</div>
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input id="email" name="email" type="text" class="form-control" required="required">
+					</div>
+					<div class="form-group">
+						<label for="phone">Phone number</label>
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<div class="input-group-text">+1</div>
+							</div>
+							<input id="phone" name="phone" type="text" class="form-control" required="required">
+						</div>
+					</div>
+					<div class="form-group">
+						<label>Gender</label>
+						<div>
+							<div class="custom-control custom-radio custom-control-inline ">
+								<input name="gender" id="gender_0" type="radio" class="custom-control-input"
+									value="male" required="required">
+								<label for="gender_0" class="custom-control-label">Male</label>
+							</div>
+							<div class="custom-control custom-radio custom-control-inline">
+								<input name="gender" id="gender_1" type="radio" class="custom-control-input"
+									value="female" required="required">
+								<label for="gender_1" class="custom-control-label">Female</label>
+							</div>
+							<div class="custom-control custom-radio custom-control-inline">
+								<input name="gender" id="gender_2" type="radio" required="required"
+									class="custom-control-input" value="other">
+								<label for="gender_2" class="custom-control-label">Others</label>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="age">Age</label>
+						<input id="age" name="age" type="text" class="form-control" required="required">
+					</div>
+					<div class="form-group">
+						<label for="qualification">Qualification</label>
+						<div>
+							<select style = "font-size: 90%;" id="qualification" name="qualification" class="custom-select" required="required">
+								<option value="associate">Associate degree</option>
+								<option value="bachelors">Bachelor's degree</option>
+								<option value="masters">Master's degree</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="gpa">GPA</label>
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<div class="input-group-text">scale of 4</div>
+							</div>
+							<input id="gpa" name="gpa" type="text" class="form-control" required="required">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="experience">Years of Experience</label>
+						<input id="experience" name="experience" type="text" class="form-control" required="required"
+							aria-describedby="experienceHelpBlock">
+					</div>
+					<div class="form-group">
+						<label for="password">Password</label>
+						<input id="password" name="password" type="password" class="form-control" required="required">
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-success btn-block" style="font-size: 100%;">Create account</button>
+					</div>
+					<table>
+					<tr>
+						<td><span >Already have an account?</span></td>
+ 						<td onclick="displayLogin()"><a href="#" style="font-size: 2vh; color: coral; margin: 10%;">SignIn</a></td>
+					</tr></table>
+				</form>
+
+			</div>
+		</div>
+
+	</div>
+	<div class="container-fluid bg" id="resetdiv" style="display: none;">
+		<div class="row">
+			<div class="col-md-5 col-sm-4 col-xs-12"></div>
+			<div class="col-md-5 col-sm-4 col-xs-12">
+
+				<form action="reset" method="GET" class="form-container" id="resetform">
+					<h1 style="font-size: 295%;">Password assistance</h1>
+					<span style="font-size: 140%; ">Enter the email address associated with your GSN account.</span>
+					<div><p></p></div>
+					<div class="form-group"> 
+						<label for="exampleInputEmail1" style="font-size: 150%;">Email address</label>
+						<input type="email" class="form-control" name="email" id="exampleInputEmail1" placeholder="Email" style="font-size: 120%;" required="required">
+					</div>
+					
+					<button type="submit" class="btn btn-success btn-block" style="font-size: 150%;">reset</button>
+					
+				</form>
+
+			</div>
+		</div>
+	</div>
+	</header>
+	
+</body>
+
+</html>
